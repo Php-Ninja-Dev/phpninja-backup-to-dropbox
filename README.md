@@ -6,9 +6,10 @@ Upload the file backup-to-dropbox.sh to target host.
 
 Modify database credentials and target folder
 
+--Make it executable
 chmod +x backup-to-dropbox.sh
 
-Execute it
+--Execute it
 ./backup-to-dropbox.sh
 
 
