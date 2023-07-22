@@ -1,5 +1,5 @@
-# phpninja-backup-to-dropbox
-Backup database &amp; files and send them to dropbox
+# Php Ninja Backup & Dropbox
+Create a backup and store it in your Dropbox
 
 # Usage
 Upload the file backup-to-dropbox.sh to target host.
