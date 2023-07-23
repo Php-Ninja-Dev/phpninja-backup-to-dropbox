@@ -1,7 +1,5 @@
 # Php Ninja Backup & Dropbox
 
-![Php Ninja Backup & Dropbox](link-to-image.png)
-
 Php Ninja Backup & Dropbox is a powerful tool that allows you to create backups of your PHP applications and effortlessly store them in your Dropbox account. With this script, you can ensure the safety of your valuable data and have peace of mind knowing that your critical files are securely backed up in the cloud.
 
 ## Features
