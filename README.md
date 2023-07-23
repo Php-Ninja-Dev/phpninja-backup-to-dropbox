@@ -7,6 +7,8 @@ Php Ninja Backup & Dropbox is a powerful tool that allows you to create backups 
 - **Automated Backup**: Schedule the script to run as a cron job for automated, periodic backups.
 - **Secure Storage**: Your backups are securely stored in your Dropbox account, ensuring data integrity and confidentiality.
 - **Customizable**: Easily modify the database credentials and target folder to suit your specific needs.
+
+### To-do
 - **Notifications (Optional)**: Optionally, receive notifications when the backup process is completed successfully.
 
 ## Installation
@@ -16,11 +18,12 @@ Php Ninja Backup & Dropbox is a powerful tool that allows you to create backups 
 ```bash
 git clone https://github.com/your-username/your-repo.git
 ```
+Or just download the .sh file and upload it to target server
 
-2. Navigate to the project directory:
+2. The script should be in the parent folder of the folder you want to backup (~www,httpdocs,etc...)
 
 ```bash
-cd your-repo
+cd /[the parent directory of the folder you want to backup and have the website files.]
 ```
 
 3. Modify the database credentials and target folder in the `backup-to-dropbox.sh` script:
@@ -30,9 +33,15 @@ cd your-repo
 DB_USER="your_database_user"
 DB_PASS="your_database_password"
 DB_NAME="your_database_name"
+DB_HOST=""
+DB_PORT=""
+
+# Dropbox API Access Token
+dropbox_token=""
+hostname="hostname will be used as root folder in dropbox"
 
 # Set the target folder path in your Dropbox
-DROPBOX_TARGET_FOLDER="/path/to/your/dropbox/folder"
+www_folder=" Here  the name of the folder that contains the website "
 ```
 
 4. Make the script executable:
@@ -80,5 +89,3 @@ We welcome contributions to enhance Php Ninja Backup & Dropbox. If you have any 
 Php Ninja Backup & Dropbox is licensed under the [MIT License](link-to-license). Feel free to use, modify, and distribute the code as per the terms specified in the license.
 
 ---
-
-Feel free to enrich the readme with relevant images, GIFs, and more detailed explanations based on your specific project. Adding a table of contents, installation steps, troubleshooting tips, and other relevant sections can further enhance the user experience and make your project's readme more informative and appealing.
