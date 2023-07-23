@@ -2,6 +2,8 @@
 
 Php Ninja Backup & Dropbox is a powerful tool that allows you to create backups of your PHP applications and effortlessly store them in your Dropbox account. With this script, you can ensure the safety of your valuable data and have peace of mind knowing that your critical files are securely backed up in the cloud.
 
+Bash, shell script to be executed from the target server. It will compile files and DB and then upload them to your Dropbox.
+
 ## Features
 - **Easy Configuration**: Simple setup process with easy-to-understand instructions.
 - **Automated Backup**: Schedule the script to run as a cron job for automated, periodic backups.
@@ -18,7 +20,7 @@ Php Ninja Backup & Dropbox is a powerful tool that allows you to create backups 
 ```bash
 git clone https://github.com/your-username/your-repo.git
 ```
-Or just download the .sh file and upload it to target server
+Or just download the .sh file and upload it to the target server
 
 2. The script should be in the parent folder of the folder you want to backup (~www,httpdocs,etc...)
 
@@ -38,10 +40,10 @@ DB_PORT=""
 
 # Dropbox API Access Token
 dropbox_token=""
-hostname="hostname will be used as root folder in dropbox"
+hostname="hostname will be used as root folder in Dropbox"
 
 # Set the target folder path in your Dropbox
-www_folder=" Here  the name of the folder that contains the website "
+www_folder=" Here is the name of the folder that contains the website "
 ```
 
 4. Make the script executable:
