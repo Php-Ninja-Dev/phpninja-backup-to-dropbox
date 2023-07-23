@@ -4,7 +4,7 @@
 #
 # Description
 # This script will do a zip of the target folder and dump the MySQL database with mysqldump, then will upload both files to Dropbox
-#
+# License: GPL-3
 
 # MySQL Credentials
 db_user="DB USER"
@@ -15,11 +15,15 @@ db_port="3306"
 
 # Dropbox API Access Token
 dropbox_token="YOUR DROPBOX TOKEN"
+
+# Dropbox Folder Structure: hostname/date/file1.zip
 hostname="THIS IS THE NAME OF THE FUTURE FOLDER IN DROPBOX"
 
-# Backup Folder and Zip File
-backup_date=$(date +%Y-%m-%d)
+# Folder to zip and extract
 www_folder="www"
+
+# Defaults
+backup_date=$(date +%Y-%m-%d)
 zip_file="files_${hostname}_${backup_date}.zip"
 sql_file="database_${hostname}_${backup_date}.sql"
 sql_zip_file="database_${hostname}_${backup_date}.zip"
@@ -27,6 +31,7 @@ sql_zip_file="database_${hostname}_${backup_date}.zip"
 # Upload both files to Dropbox
 upload_to_dropbox() {
     local source_file="$1"
+    # Folder Structure: hostname/date/file1.zip
     local dropbox_path="/${hostname}/${backup_date}/${source_file}"
     local dropbox_api_url="https://content.dropboxapi.com/2/files/upload"
     echo "${dropbox_path}"
