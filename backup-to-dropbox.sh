@@ -69,7 +69,7 @@ done
 # ZIP
 echo "========================"
 echo "Files Backup Zipping ... "
-zip -r -s 100M "${zip_file}" "${www_folder}" -x "cache/*" "tmp/*" ".git/*" "git/*" "ninja/*"
+zip -r -s 100M "${zip_file}" "${www_folder}" -x "cache/\*" "tmp/\*" ".git/\*" "git/\*" "ninja/\*"
 
 # Upload zip chunks
 echo "Uploading ZIP chunks to DROPBOX..."
